@@ -22,8 +22,10 @@ angular.module('starter.services', [])
 
         // these are functions exposed to public
         return {
-            /**
-            * 
+             /**
+            * Fetches tracks of a specific album
+            * @param   {String}  albumId 
+            * @returns {Promise}
             */
             fetchTracks: function (albumId) {
 
@@ -48,7 +50,7 @@ angular.module('starter.services', [])
 		  
             },
             /**
-            * Gets item by specific id
+            * Search for albums that match the query
             * @param   {String}  query 
             * @returns {Promise}
             */
