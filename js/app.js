@@ -1,4 +1,4 @@
-angular.module('starter',['ngRoute','starter.controllers'])
+angular.module('starter',['ngRoute','starter.controllers','starter.services'])
 .config(['$routeProvider', function($routeProvider) {
 
 $routeProvider
@@ -14,25 +14,6 @@ $routeProvider
 		templateUrl : 'templates/about.html',
 		controller  : 'aboutController'
 	}) 
-
-	// route for the services page
-	.when('/services', {
-		templateUrl : 'templates/services.html',
-		controller  : 'servicesController'
-	}) 
-	
-	// route for the gallery page
-	.when('/gallery', {
-		templateUrl : 'templates/gallery.html',
-		controller  : 'galleryController'
-	}) 
-	
-	
-	// route for the contact page
-	.when('/contact', {
-		templateUrl : 'templates/contact.html',
-		controller  : 'contactController'
-	})
 	
 	.otherwise({
 			redirectTo: '/'
