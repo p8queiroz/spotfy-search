@@ -12,7 +12,6 @@ angular.module('starter.controllers', [])
 			e.preventDefault();
 			AlbumService.searchAlbums(document.getElementById('query').value).then(function(data){
 				$scope.data = data;
-				console.log($scope.data);
 				resultsPlaceholder.innerHTML = template($scope.data);
 			});
 			
