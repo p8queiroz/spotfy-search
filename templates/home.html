@@ -8,11 +8,15 @@
     <div id="results"></div>
 </div>
 <script id="results-template" type="text/x-handlebars-template">
-    {{#each albums.items}}
-    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+	{{#each tracks.items}}
+    <div style="background-image:url({{album.images.2.url}})" data-album-id="{{album.id}}" class="cover">
+	</div>
+		<div> Artist name : {{artists.0.name}} </div>
+		<div> Music name  : {{name}} </div>
+		<div> Album name  : {{album.name}} </div>
+		<!--<div> more : {{artists.0.uri}} </div>-->
     {{/each}}
 </script>
-
 
 <!--<div class="slider">		
 	<div id="about-slider">

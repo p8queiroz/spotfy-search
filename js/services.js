@@ -62,7 +62,7 @@ angular.module('starter.services', [])
 				  url: 'https://api.spotify.com/v1/search',
 				  params: {
 						q: query,
-						type: 'album'
+						type: 'track'
 					}
 				}).success(function (data, status, headers, config) {
 				  deffered.resolve(data);

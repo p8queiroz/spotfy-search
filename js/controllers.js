@@ -13,6 +13,7 @@ angular.module('starter.controllers', [])
 			AlbumService.searchAlbums(document.getElementById('query').value).then(function(data){
 				$scope.data = data;
 				resultsPlaceholder.innerHTML = template($scope.data);
+				console.log($scope.data);
 			});
 			
 			results.addEventListener('click', function (e) {
@@ -34,6 +35,7 @@ angular.module('starter.controllers', [])
 							audioObject.addEventListener('pause', function () {
 								target.classList.remove(playingCssClass);
 							});
+							
 						}, function(error){
 							console.log(error);
 						});
